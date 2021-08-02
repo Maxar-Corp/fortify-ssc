@@ -17,10 +17,8 @@ ingressClass: nginx
 
 path: /
 routes:
-  - hostname: http-web
+  - hostname: fortify.ossim.io
     servicePort: 80
-  - hostname: https-web
-    servicePort: 443
 
 # overrides service name, defaults to the helm chart name (ssc)
 nameOverride: ""
