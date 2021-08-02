@@ -6,7 +6,7 @@ global:
   createIngress: true
 
 image:
-  repositoryPrefix: "nexus-docker-public-hosted.ossim.io/"
+  repositoryPrefix: "nexus-docker-public-group.ossim.io/"
   tag: 20.2.0.0149.0001
   pullPolicy: Always
 
