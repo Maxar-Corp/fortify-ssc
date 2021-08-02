@@ -20,10 +20,10 @@ spec:
       containers:
         - name: webapp
           ports:
-            - name: fortify.ossim.io
+            - name: http-8080
               containerPort: 8080
               protocol: TCP
-            - name: fortify.ossim.io
+            - name: https-8443
               containerPort: 8443
               protocol: TCP
           env:

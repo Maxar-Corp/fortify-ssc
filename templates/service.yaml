@@ -23,7 +23,7 @@ spec:
   ports:
   {{- with .Values.service.httpPort }}
     - name: http-web
-      targetPort: 8081
+      targetPort: 8080
     {{- if eq $type "ClusterIP" }}
       nodePort: 0
     {{- end }}
