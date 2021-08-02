@@ -23,7 +23,7 @@ spec:
   ports:
   {{- with .Values.service.httpPort }}
     - name: http-web
-      targetPort: http-web
+      targetPort: 8081
     {{- if eq $type "ClusterIP" }}
       nodePort: 0
     {{- end }}
@@ -31,7 +31,7 @@ spec:
       protocol: TCP
   {{- end }}
     - name: https-web
-      targetPort: https-web
+      targetPort: 8443
     {{- if eq $type "ClusterIP" }}
       nodePort: 0
     {{- end }}

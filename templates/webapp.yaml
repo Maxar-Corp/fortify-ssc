@@ -20,22 +20,12 @@ spec:
       containers:
         - name: webapp
           ports:
-            - name: http-web
+            - name: fortify.ossim.io
               containerPort: 8080
               protocol: TCP
-            - name: https-web
+            - name: fortify.ossim.io
               containerPort: 8443
               protocol: TCP
-          readinessProbe:
-            initialDelaySeconds: 10
-            periodSeconds: 10
-            httpGet:
-              path: /images/favicon.ico
-              port: https-web
-              scheme: HTTPS
-              httpHeaders:
-                - name: Host
-                  value: "https://{{ $fullUrlHost }}/"
           env:
             - name: HOST_URL
               value: "https://{{ $fullUrlHost }}/"

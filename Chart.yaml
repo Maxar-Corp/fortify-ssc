@@ -3,3 +3,4 @@ description: A Helm chart for Fortify Software Security Center application
 name: ssc
 appVersion: 20.2.0.0149
 version: 1.0.149
+
