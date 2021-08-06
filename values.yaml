@@ -7,7 +7,7 @@ global:
 
 image:
   repositoryPrefix: "nexus-docker-public-group.ossim.io/"
-  tag: 20.2.0.0149.0001
+  #tag: 20.2.0.0149.0001
   pullPolicy: Always
 
 imagePullSecrets:
@@ -45,7 +45,7 @@ service:
   annotations: {}
 
 # urlHost is a fully qualified DNS name for externally accessing the application (required)
-urlHost: "fortify.ossim.io"
+urlHost: "172.20.0.0"
 
 # jdbcDriverUri is a path to a JDBC driver file or an URL for downloading a JDBC driver (required for Oracle and MySQL)
 jdbcDriverUri: ""
