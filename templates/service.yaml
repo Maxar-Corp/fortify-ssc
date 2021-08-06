@@ -24,16 +24,16 @@ spec:
   {{- with .Values.service.httpPort }}
     - name: http-web
       targetPort: 8080
-    {{- if eq $type "ClusterIP" }}
-      nodePort: 0
-    {{- end }}
+#    {{- if eq $type "ClusterIP" }}
+#      nodePort: 0
+#    {{- end }}
       port: {{ . | int }}
       protocol: TCP
   {{- end }}
     - name: https-web
       targetPort: 8443
-    {{- if eq $type "ClusterIP" }}
-      nodePort: 0
-    {{- end }}
+#    {{- if eq $type "ClusterIP" }}
+#      nodePort: 0
+#    {{- end }}
       port: {{ required "The service.httpsPort config value is required!" .Values.service.httpsPort | int }}
       protocol: TCP

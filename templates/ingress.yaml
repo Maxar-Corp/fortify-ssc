@@ -4,6 +4,8 @@ kind: Ingress
 metadata:
   name: {{ .Values.appName }}
   annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
     kubernetes.io/ingress.class: {{ .Values.ingressClass | default "nginx" | quote }}
     {{- if .Values.extraIngressAnnotations }}
     {{- toYaml .Values.extraIngressAnnotations | nindent 4 }}
