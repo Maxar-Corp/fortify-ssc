@@ -1,4 +1,4 @@
-appName: ssc
+appName: fortify-ssc
 global:
   useTls: true
   useTLSClientAuth: false
